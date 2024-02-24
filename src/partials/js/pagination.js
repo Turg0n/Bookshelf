@@ -18,7 +18,7 @@ let currentPage =   1;
 
 //Функції
 
-function setPaginationOptions(itemsPerPage=5,visiblePages=5){
+function setPaginationOptions(itemsPerPage,visiblePages){
     
     let arrayShoppingList   =   window.localStorage.getItem(LOCAL_STORAGE_NAME);
 
@@ -37,10 +37,23 @@ function setPaginationOptions(itemsPerPage=5,visiblePages=5){
 
 
 function getShoppingList(){
+    
+    let arrayShoppingList   =   window.localStorage.getItem(LOCAL_STORAGE_NAME);
+    let resultArray =   [];
+    
+    if (arrayShoppingList!==null) {
 
-    let arrayShoppingList   =   JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_NAME));
+    arrayShoppingList     =   JSON.parse(arrayShoppingList);
+    let indexFrom   =   paginationOptions.itemsPerPage*currentPage-paginationOptions.itemsPerPage;
+
+    console.log(indexFrom,paginationOptions.itemsPerPage,arrayShoppingList);
     
-    
+    resultArray   =   arrayShoppingList.slice(indexFrom,indexFrom+paginationOptions.itemsPerPage);
+
+    }
+
+console.log(resultArray);
+return resultArray;
 
 }
 
@@ -64,7 +77,7 @@ set_Test_ShoppingList();
 
 
 
-setPaginationOptions();
+setPaginationOptions(5,5);
 var pagination = new Pagination('pagination-list', paginationOptions);
 
 pagination.on('beforeMove', function(eventData) {
