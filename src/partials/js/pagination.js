@@ -1,5 +1,6 @@
 import Pagination from 'tui-pagination';
 
+
 let paginationOptions   =   {
     totalItems: 500,
     itemsPerPage: 5,
@@ -52,21 +53,21 @@ function getShoppingList(){
 
     }
 
-console.log(resultArray);
+// console.log(resultArray);
 return resultArray;
 
 }
 
 
 
-//Єкспортування
+//Єкспортування функції отримимання данних через пагінацію
 export {getShoppingList};
 
 
 // --------------------------------------------------TEST data----------------------------------------------------
 
 function set_Test_ShoppingList() {
-let testArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+let testArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
 localStorage.setItem(LOCAL_STORAGE_NAME, JSON.stringify(testArray));
 }
 
