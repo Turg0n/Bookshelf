@@ -1,12 +1,28 @@
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.min.css'
+import 'tui-pagination/dist/tui-pagination.css'
 
 let resultArray =   [];
 
 let paginationOptions   =   {
     totalItems: 0,
     itemsPerPage: 0,
-    visiblePages: 0
+    visiblePages: 0,
+    template: {
+        page: '<a href="#" class="tui-page-btn">{{page}}</a>',
+        currentPage: '<strong class="tui-page-btn tui-is-selected">{{page}}</strong>',
+        moveButton:
+          '<a href="#" class="tui-page-btn tui-page-btn-moveButton tui-{{type}}">' +
+            '<span class="tui-ico-{{type}}">{{type}}</span>' +
+          '</a>',
+        disabledMoveButton:
+          '<span class="tui-page-btn tui-page-btn-disabledMoveButton tui-is-disabled tui-{{type}}">' +
+            '<span class="tui-ico-{{type}}">{{type}}</span>' +
+          '</span>',
+        moreButton:
+          '<a href="#" class="tui-page-btn ui-page-btn-moreButton tui-{{type}}-is-ellip">' +
+            '<span class="tui-ico-ellip">...</span>' +
+          '</a>'
+      }
 };
 
 const LOCAL_STORAGE_NAME = 'ShoppingListLocalStorage';
