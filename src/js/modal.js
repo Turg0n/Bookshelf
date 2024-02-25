@@ -1,4 +1,4 @@
-import api from './serviceBooks';
+import getBookById from './serviceBooks';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/apple-books.png';
 // import getRefs from '';
@@ -15,7 +15,7 @@ let shoppingCard = [];
 let firstCard = {};
 const descEmpty = '';
 function openModal(bookId) {
-    api.fetchBookById(bookId).then(book => {
+    getBookById.fetchBookById(bookId).then(book => {
     modalTitle.innerText = book.title;
     if(!book.description){
         book.description=descEmpty;
