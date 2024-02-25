@@ -1,4 +1,4 @@
-import { fetchingByBook } from './apiService';
+import { fetchingByBook } from './serviceBooks';
 import Notiflix from 'notiflix';
 import amazon from '../images/amazon.png'; 
 import appleBooks from '../images/apple-books.png';
