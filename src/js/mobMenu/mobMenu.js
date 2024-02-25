@@ -12,6 +12,7 @@ const mobMenu = () => {
   burgerButton.addEventListener('click', openMenu);
 
   closeButton.addEventListener('click', openMenu);
+  console.log(backDropMenu);
 };
 
 export default mobMenu;
