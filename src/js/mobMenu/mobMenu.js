@@ -8,19 +8,14 @@ const mobMenu = () => {
   console.log(burgerButton);
 
   const closeButton = document.querySelector('.');
-  console.log(closeButton);
 
   function openMenu() {
-    mobileMenu.classList.toggle('show__mob');
-  }
-
-  function closeMenu() {
-    mobileMenu.classList.remove('is-open');
+    backDropMenu.classList.toggle('show__mob-menu');
   }
 
   burgerButton.addEventListener('click', openMenu);
 
-  closeButton.addEventListener('click', closeMenu);
+  closeButton.addEventListener('click', openMenu);
 };
 
 export default mobMenu;
