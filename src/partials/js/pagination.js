@@ -20,7 +20,7 @@ const PAGINATION_DEV_LIST = document.getElementById('pagination-list');
 
 //Функції
 
-function setPaginationOptions(itemsPerPage=5,visiblePages=5){
+function setPaginationOptions(itemsPerPage,visiblePages){
     
     let arrayShoppingList   =   window.localStorage.getItem(LOCAL_STORAGE_NAME);
 
@@ -77,7 +77,7 @@ set_Test_ShoppingList();
 
 
 
-setPaginationOptions(5,5);
+setPaginationOptions(3,2);
 let pagination = new Pagination('pagination-list', paginationOptions);
 
 pagination.on('beforeMove', function(eventData) {
