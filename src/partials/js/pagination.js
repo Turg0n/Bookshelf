@@ -10,8 +10,7 @@ let paginationOptions   =   {
 };
 
 const LOCAL_STORAGE_NAME = 'ShoppingListLocalStorage';
-
-const paginationDivList = document.getElementById('pagination-list');
+const PAGINATION_DEV_LIST = document.getElementById('pagination-list');
 
 
 
@@ -42,13 +41,13 @@ function getShoppingList(){
     let indexFrom = 0;
     
     if (arrayShoppingList==null || JSON.parse(arrayShoppingList).length == 0) {
-        paginationDivList.style.display = 'none';  
+        PAGINATION_DEV_LIST.style.display = 'none';  
     } else {
         
     arrayShoppingList     =   JSON.parse(arrayShoppingList);
     indexFrom   =   paginationOptions.itemsPerPage*pagination._currentPage-paginationOptions.itemsPerPage;
     resultArray   =   arrayShoppingList.slice(indexFrom,indexFrom+paginationOptions.itemsPerPage);
-    paginationDivList.style.display = 'block';  
+    PAGINATION_DEV_LIST.style.display = 'block';  
     }
 
 // console.log(indexFrom,paginationOptions.itemsPerPage,resultArray);
@@ -87,8 +86,8 @@ pagination.on('beforeMove', function(eventData) {
 
 pagination.on('afterMove', function(eventData) {
     resultArray = getShoppingList();
-    console.log(resultArray);
+    // console.log(resultArray);
 });
 
 resultArray = getShoppingList();
-console.log(resultArray);
+// console.log(resultArray);
