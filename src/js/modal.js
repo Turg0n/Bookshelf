@@ -1,6 +1,7 @@
 import api from './serviceBooks';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/apple-books.png';
+import { showLoader, hideLoader } from './loader.js';
 
 const modal = document.getElementById('bookModal');
 const modalTitle = document.getElementById('bookModalTitle');
