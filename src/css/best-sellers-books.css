@@ -1,0 +1,318 @@
+.container {
+    max-width: 375px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1044px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.main-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px),
+(min-width: 1440px) {
+    .main-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.main-title {
+    font-size: 32px;
+    line-height: 1.19;
+    letter-spacing: -0.04em;
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-title {
+        font-size: 48px;
+        line-height: 1.08;
+    }
+}
+
+.accent-text {
+    color: var(--violet);
+}
+
+.best-sellers-container:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    color: var(--grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+    .category-title {
+        line-height: 1.71;
+    }
+}
+
+.best-sellers-list {
+    display: flex;
+    column-gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.category-list {
+    display: flex;
+    row-gap: 40px;
+    column-gap: 24px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+    .best-sellers-list {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .best-sellers-list {
+        margin-bottom: 32px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .best-sellers-list-item,
+    .category-list-item {
+        flex-basis: calc((100% - 25px * 2) / 3);
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .best-sellers-list-item,
+    .category-list-item {
+        flex-basis: calc((100% - 24px * 4) / 5);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .best-sellers-list-item:not(:first-child) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+    .best-sellers-list-item:nth-child(n + 4) {
+        display: none;
+    }
+}
+
+.best-sellers-list-item:hover .overlay-text,
+.best-sellers-list-item:focus .overlay-text,
+.best-sellers-list-item:active .overlay-text,
+.category-list-item:hover .overlay-text,
+.category-list-item:focus .overlay-text,
+.category-list-item:active .overlay-text {
+    transform: translateY(0);
+}
+
+.overlay-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-box:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.overlay-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 28%;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    transform: translateY(100%);
+    background-color: var(--yellow);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-img {
+    height: 485px;
+}
+
+@media only screen and (min-width: 768px) {
+    .book-img {
+        height: 316px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .book-img {
+        height: 256px;
+    }
+}
+
+.book-title {
+    font-size: 16px;
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+
+.book-author {
+    color: var(--grey);
+    font-style: italic;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: -0.04em;
+}
+
+.see-more-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.see-more-btn {
+    color: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    width: 124px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    background-color: transparent;
+    border: 2px solid var(--violet);
+    border-radius: 40px;
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.see-more-btn:hover,
+.see-more-btn:active {
+    transform: scale(1.05);
+    color: var(--white);
+    background-color: var(--violet);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* LOADER */
+
+.loader {
+    position: relative;
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+    background-color: #0044ff;
+    transform: rotateX(65deg) rotate(45deg);
+    transform: perspective(200px) rotateX(65deg) rotate(45deg);
+    color: #ffd336;
+    animation: layers1 1s linear infinite alternate;
+
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: layerTr 1s linear infinite alternate;
+}
+
+@keyframes layers1 {
+    0% {
+        box-shadow: 0px 0px 0 0px
+    }
+
+    90%,
+    100% {
+        box-shadow: 20px 20px 0 -4px
+    }
+}
+
+@keyframes layerTr {
+    0% {
+        transform: translate(0, 0) scale(1)
+    }
+
+    100% {
+        transform: translate(-25px, -25px) scale(1)
+    }
+}
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: var(--violet);
+    box-shadow: #4F2EE84D 0px 1px 5px, #4F2EE84D 0px 0px 0px 5px;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(25px);
+    transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 1440px) {
+    .scroll-to-top-btn {
+        bottom: 50px;
+        right: 50px;
+    }
+}
+
+.scroll-to-top-btn-show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.scroll-to-top-btn-icon {
+    width: 24px;
+    height: 24px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
