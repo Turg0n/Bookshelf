@@ -9,7 +9,6 @@ let paginationOptions   =   {
 };
 
 const LOCAL_STORAGE_NAME = 'ShoppingListLocalStorage';
-let currentPage =   1;
 
 const paginationDivList = document.getElementById('pagination-list');
 
@@ -46,12 +45,13 @@ function getShoppingList(){
         paginationDivList.style.display = 'none';  
     } else {
     arrayShoppingList     =   JSON.parse(arrayShoppingList);
-    indexFrom   =   paginationOptions.itemsPerPage*currentPage-paginationOptions.itemsPerPage;
+    indexFrom   =   paginationOptions.itemsPerPage*pagination._currentPage-paginationOptions.itemsPerPage;
     resultArray   =   arrayShoppingList.slice(indexFrom,indexFrom+paginationOptions.itemsPerPage);
     paginationDivList.style.display = 'block';  
     }
 
 console.log(indexFrom,paginationOptions.itemsPerPage,resultArray);
+
 return resultArray;
 
 }
@@ -59,7 +59,7 @@ return resultArray;
 
 
 //Єкспортування функції отримимання данних через пагінацію
-export {getShoppingList};
+// export {getShoppingList};
 
 
 // --------------------------------------------------TEST data----------------------------------------------------
@@ -78,14 +78,13 @@ set_Test_ShoppingList();
 
 
 setPaginationOptions(5,5);
-var pagination = new Pagination('pagination-list', paginationOptions);
+let pagination = new Pagination('pagination-list', paginationOptions);
 
 pagination.on('beforeMove', function(eventData) {
     // return confirm('Go to page ' + eventData.page + '?');
 });
 
 pagination.on('afterMove', function(eventData) {
-    currentPage =   eventData.page;
     getShoppingList();
 });
 
