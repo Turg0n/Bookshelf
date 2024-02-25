@@ -8,7 +8,7 @@
 @import url('./vite-promo.css');
 @import url('./header.css');
 @import url('./shopping-list.css');
-
+@import url('./modal.css');
 :root {
   --primary-font: 'DM Sans', sans-serif;
   --black: #111;
