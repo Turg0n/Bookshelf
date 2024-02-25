@@ -1,7 +1,3 @@
-/* Загальний дів */
-.tui-pagination {
-
-}
 
 /* Загальний для уісіх кнопок */
 .tui-page-btn{
@@ -10,11 +6,22 @@
  
 }
 
+.tui-is-selected {
+
+}
+
 .tui-page-btn-moveButton{
     background-color: #eac545;
-
 }
 
 .tui-page-btn-disabledMoveButton{
     background-color: black;
+}
+
+.tui-ico-ellip{
+    
+}
+
+.tui-page-btn-moreButton{
+
 }
