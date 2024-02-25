@@ -1,11 +1,18 @@
+/* Загальний дів */
+.tui-pagination {
+
+}
+
 /* Загальний для уісіх кнопок */
 .tui-page-btn{
     border-radius: 50%;
     margin-right: 8px;
+ 
 }
 
 .tui-page-btn-moveButton{
     background-color: #eac545;
+
 }
 
 .tui-page-btn-disabledMoveButton{
