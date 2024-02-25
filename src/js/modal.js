@@ -1,7 +1,8 @@
-// import api from './serviceBooks';
+import api from './serviceBooks';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/apple-books.png';
-
+// import getRefs from '';
+// const refs = getRefs();
 const modal = document.getElementById('bookModal');
 const modalTitle = document.getElementById('bookModalTitle');
 const modalText = document.getElementById('bookModalText');
@@ -111,7 +112,7 @@ document.addEventListener('keydown', event => {
     }
 });
 // Відкриття модалки
-// "Index".bookCollectionWrapper.addEventListener('click', event => {
+// refs.bookCollectionWrapper.addEventListener('click', event => {
 //     const bookLink = event.target.closest('.book-link');
 //     if (bookLink) {
 //     event.preventDefault();

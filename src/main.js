@@ -1,14 +1,13 @@
 import './js/categories';
 import './js/modal';
-import './js/addBooksListeners';
-import './js/apiService';
-import './js/createBookCard';
-import './js/homeRefs';
 import './js/mobMenu';
 import './js/pagination';
-import './js/renderingByCategory';
-import './js/renderingHomePage';
 import './js/spin';
+import './js/Loader';
+import './js/best-sellers-books';
+import './js/serviceBooks';
+import './js/sideBar';
+import './js/scroll-up';
 window.addEventListener('DOMContentLoaded', () => {
   mobMenu();
 });
