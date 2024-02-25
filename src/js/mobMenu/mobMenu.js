@@ -1,11 +1,7 @@
 const mobMenu = () => {
   const backDropMenu = document.querySelector('.backdrop');
 
-  console.log(backDropMenu);
-
   const burgerButton = document.querySelector('.');
-
-  console.log(burgerButton);
 
   const closeButton = document.querySelector('.');
 
