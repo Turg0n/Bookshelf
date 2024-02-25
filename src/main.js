@@ -1,5 +1,4 @@
 import './js/categories';
-import './js/shoppingListService';
 import './js/modal';
 import './js/addBooksListeners';
 import './js/apiService';
