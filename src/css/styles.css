@@ -7,6 +7,12 @@
 @import url('./reset.css');
 @import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./mob-menu.css');
+@import url('./shopping-list.css');
+@import url('./modal.css');
+@import url('./categories.css');
+
+
 
 :root {
   --primary-font: 'DM Sans', sans-serif;
@@ -18,7 +24,6 @@
   --grey: #b4afaf;
   --background-body-light: #f6f6f6;
   --background-body-dark: #202024;
-
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

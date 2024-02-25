@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/Bookshelf/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "push": "git add . && git commit -m 'update' && git push"
   },
   "devDependencies": {
     "glob": "^8.1.0",
@@ -18,6 +19,7 @@
     "axios": "^1.6.7",
     "notiflix": "^3.2.7",
     "tui-pagination": "^3.4.1",
+
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }
