@@ -1,4 +1,4 @@
-import getBookById from './serviceBooks';
+import { getBookById } from './serviceBooks';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/apple-books.png';
 // import getRefs from '';
