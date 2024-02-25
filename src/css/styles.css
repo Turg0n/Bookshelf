@@ -9,6 +9,10 @@
 @import url('./header.css');
 @import url('./shopping-list.css');
 @import url('./modal.css');
+@import url('./categories.css');
+
+
+
 :root {
   --primary-font: 'DM Sans', sans-serif;
   --black: #111;
