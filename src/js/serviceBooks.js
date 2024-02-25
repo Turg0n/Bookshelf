@@ -54,4 +54,4 @@ async function getAllBooks() {
     }
 }
 
-export { getAllBooks, getAllCategories, getBookById, getBooksByCategory };
+export default { getAllBooks, getAllCategories, getBookById, getBooksByCategory };
