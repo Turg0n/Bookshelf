@@ -1,10 +1,10 @@
 import { fetchingByBook } from './js/serviceBooks';
 import Notiflix from 'notiflix';
-import amazon from '../images/amazon.png'; 
-import appleBooks from '../images/apple-books.png';
-import bookShop from '../images/book-shop.png';
+import amazon from './images/amazon.png'; 
+import appleBooks from './images/apple-books.png';
+import bookShop from './images/book-shop.png';
 // import trash from '../images/trashh.svg#icon-bin';
-const imageUrl = new URL('../images/trashh.svg#icon-bin', import.meta.url);
+const imageUrl = new URL('./images/trashh.svg#icon-bin', import.meta.url);
 
 Notiflix.Notify.init({
   width: '370px',
