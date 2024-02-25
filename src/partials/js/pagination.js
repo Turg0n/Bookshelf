@@ -1,6 +1,7 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.min.css'
 
+let resultArray =   [];
 
 let paginationOptions   =   {
     totalItems: 0,
@@ -38,19 +39,19 @@ function setPaginationOptions(itemsPerPage=5,visiblePages=5){
 function getShoppingList(){
     
     let arrayShoppingList   =   window.localStorage.getItem(LOCAL_STORAGE_NAME);
-    let resultArray =   [];
     let indexFrom = 0;
     
     if (arrayShoppingList==null || JSON.parse(arrayShoppingList).length == 0) {
         paginationDivList.style.display = 'none';  
     } else {
+        
     arrayShoppingList     =   JSON.parse(arrayShoppingList);
     indexFrom   =   paginationOptions.itemsPerPage*pagination._currentPage-paginationOptions.itemsPerPage;
     resultArray   =   arrayShoppingList.slice(indexFrom,indexFrom+paginationOptions.itemsPerPage);
     paginationDivList.style.display = 'block';  
     }
 
-console.log(indexFrom,paginationOptions.itemsPerPage,resultArray);
+// console.log(indexFrom,paginationOptions.itemsPerPage,resultArray);
 
 return resultArray;
 
@@ -85,7 +86,9 @@ pagination.on('beforeMove', function(eventData) {
 });
 
 pagination.on('afterMove', function(eventData) {
-    getShoppingList();
+    resultArray = getShoppingList();
+    console.log(resultArray);
 });
 
-getShoppingList();
+resultArray = getShoppingList();
+console.log(resultArray);
