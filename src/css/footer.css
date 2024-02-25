@@ -1,0 +1,30 @@
+footer {
+    border: 1.5px solid black;
+    border-radius: 8px 8px 0px 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 100%;
+  } 
+  footer h3{
+    margin-left: 12px;
+    color: #4F2EE8;
+  }
+  
+  
+  footer p{
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+    footer p{
+      font-size: 18px;
+    }
+  
+  }
+  
+  @media screen and (min-width: 1440px) {
+    footer p{
+      font-size: 20px;
+    }
+  }
