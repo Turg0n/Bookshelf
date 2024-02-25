@@ -1,0 +1,27 @@
+
+/* Загальний для уісіх кнопок */
+.tui-page-btn{
+    border-radius: 50%;
+    margin-right: 8px;
+ 
+}
+
+.tui-is-selected {
+
+}
+
+.tui-page-btn-moveButton{
+    background-color: #eac545;
+}
+
+.tui-page-btn-disabledMoveButton{
+    background-color: black;
+}
+
+.tui-ico-ellip{
+    
+}
+
+.tui-page-btn-moreButton{
+
+}
