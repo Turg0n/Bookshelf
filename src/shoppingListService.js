@@ -1,8 +1,9 @@
-import { fetchingByBook } from './js/serviceBooks';
+import { getBookById } from './js/serviceBooks';
 import Notiflix from 'notiflix';
 import amazon from './images/amazon.png'; 
 import appleBooks from './images/apple-books.png';
 import bookShop from './images/book-shop.png';
+import { showLoader, hideLoader } from './js/Loader';
 // import trash from '../images/trashh.svg#icon-bin';
 const imageUrl = new URL('./images/trashh.svg#icon-bin', import.meta.url);
 
@@ -123,9 +124,16 @@ function renderingShoppingList() {
 }
 
 export async function addingToShopList(e) {
-  const book = await fetchingByBook(e.target.dataset.id);
-  saveToLocalStorage(book);
-  Notiflix.Notify.success('Book added to shopping list');
+  try {
+    showLoader();
+    const book = await getBookById(e.target.dataset.id);
+    saveToLocalStorage(book);
+    Notiflix.Notify.success('Book added to shopping list');
+    hideLoader();
+  } catch (error) {
+    hideLoader();
+    console.error('Error:', error);
+  }
 }
 
 export function removingBookFromShoppingList(e) {

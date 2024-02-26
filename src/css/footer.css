@@ -1,4 +1,7 @@
-.footer-container {
+
+footer {
+    margin-top: 20px;
+
     border: 1.5px solid black;
     border-radius: 8px 8px 0px 0px;
     padding-top: 8px;
@@ -24,18 +27,24 @@
 
     .footer-container p{
     font-size: 14px;
+
     text-align: center;
+    letter-spacing: 2px;
   }
   
   @media screen and (min-width: 768px) {
+
     .footer-container p{
       font-size: 18px;
+
     }
   
   }
   
   @media screen and (min-width: 1440px) {
+
     .footer-container p{
       font-size: 20px;
+
     }
   }

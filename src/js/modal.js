@@ -1,8 +1,9 @@
 import { getBookById } from './serviceBooks';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/apple-books.png';
-// import getRefs from '';
-// const refs = getRefs();
+import { showLoader, hideLoader } from './Loader.js';
+import {mainWrapper} from './best-sellers-books';
+const mainWrapper = mainWrapper;
 const modal = document.getElementById('bookModal');
 const modalTitle = document.getElementById('bookModalTitle');
 const modalText = document.getElementById('bookModalText');
@@ -112,15 +113,15 @@ document.addEventListener('keydown', event => {
     }
 });
 // Відкриття модалки
-// refs.bookCollectionWrapper.addEventListener('click', event => {
-//     const bookLink = event.target.closest('.book-link');
-//     if (bookLink) {
-//     event.preventDefault();
-//     const bookId = bookLink.dataset.id;
+mainWrapper.bookCollectionWrapper.addEventListener('click', event => {
+    const bookLink = event.target.closest('.book-link');
+    if (bookLink) {
+    event.preventDefault();
+    const bookId = bookLink.dataset.id;
     
-//     openModal(bookId);
-//     }
-// });
+    openModal(bookId);
+    }
+});
 
 // Локалка
 const savedShoppingList = localStorage.getItem('shoppingList');
