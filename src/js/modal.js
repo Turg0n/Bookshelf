@@ -114,7 +114,7 @@ document.addEventListener('keydown', event => {
 });
 // Відкриття модалки
 bookWrapp.addEventListener('click', event => {
-    const bookLink = event.target.closest('.book-link');
+    const bookLink = event.target.closest('.best-sellers-list-item');
     if (bookLink) {
     event.preventDefault();
     const bookId = bookLink.dataset.id;
