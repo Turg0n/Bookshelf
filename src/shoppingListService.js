@@ -3,7 +3,7 @@ import Notiflix from 'notiflix';
 import amazon from './images/amazon.png'; 
 import appleBooks from './images/apple-books.png';
 import bookShop from './images/book-shop.png';
-import { showLoader, hideLoader } from './Loader.js';
+import { showLoader, hideLoader } from './js/Loader';
 // import trash from '../images/trashh.svg#icon-bin';
 const imageUrl = new URL('./images/trashh.svg#icon-bin', import.meta.url);
 
