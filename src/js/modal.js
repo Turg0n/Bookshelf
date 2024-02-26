@@ -1,14 +1,22 @@
 import { getBookById } from './serviceBooks';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/apple-books.png';
-// import getRefs from '';
-// const refs = getRefs();
+const getRefs = () => {
+  return {
+    // home page wrapper for dynamically rendered book collections
+    bookCollectionWrapper: document.querySelector('.book-collection-wrapper'),
+    //category sidebar
+    ctgList: document.querySelector('.ctg-list'),
+    ctgName: document.querySelector('.selected-ctg-name'),
+  }
+};
+const refs = getRefs();
 const modal = document.getElementById('bookModal');
 const modalTitle = document.getElementById('bookModalTitle');
 const modalText = document.getElementById('bookModalText');
 const addToShoppingListBtn = document.getElementById('addToShoppingList');
 const modalCloseBtn = document.querySelector('.modal-close');
-const addTextModal = document.getElementById('modalADText');
+const addTextModal = document.getElementById('modalFooterText');
 
 let shoppingList = [];
 let shoppingCard = [];
@@ -112,15 +120,16 @@ document.addEventListener('keydown', event => {
     }
 });
 // Відкриття модалки
-// refs.bookCollectionWrapper.addEventListener('click', event => {
-//     const bookLink = event.target.closest('.book-link');
-//     if (bookLink) {
-//     event.preventDefault();
-//     const bookId = bookLink.dataset.id;
+
+refs.bookCollectionWrapper.addEventListener('click', event => {
+    const bookLink = event.target.closest('.book-link');
+    if (bookLink) {
+    event.preventDefault();
+    const bookId = bookLink.dataset.id;
     
-//     openModal(bookId);
-//     }
-// });
+    openModal(bookId);
+    }
+});
 
 // Локалка
 const savedShoppingList = localStorage.getItem('shoppingList');

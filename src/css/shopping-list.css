@@ -1,3 +1,5 @@
+@import url('./header.css');
+
 .container-shop-list {
   display: flex;
   gap: 40px;
