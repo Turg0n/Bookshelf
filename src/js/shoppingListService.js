@@ -1,9 +1,9 @@
 import { fetchingByBook } from './serviceBooks';
 import Notiflix from 'notiflix';
-import amazon from '../images/amazon.png'; 
-import appleBooks from '../images/apple-books.png';
-import bookShop from '../images/book-shop.png';
-import { showLoader, hideLoader } from './loader.js';
+import amazon from './images/amazon.png'; 
+import appleBooks from './images/apple-books.png';
+import bookShop from './images/book-shop.png';
+import { showLoader, hideLoader } from './Loader.js';
 // import trash from '../images/trashh.svg#icon-bin';
 const imageUrl = new URL('../images/trashh.svg#icon-bin', import.meta.url);
 
@@ -124,6 +124,7 @@ function renderingShoppingList() {
 }
 
 export async function addingToShopList(e) {
+<<<<<<< Updated upstream:src/js/shoppingListService.js
   showLoader();
 
   try {
@@ -135,6 +136,17 @@ export async function addingToShopList(e) {
     Notiflix.Notify.failure('Failed to add book to shopping list');
   } finally {
     hideLoader();
+=======
+  try {
+    showLoader();
+    const book = await fetchingByBook(e.target.dataset.id);
+    saveToLocalStorage(book);
+    Notiflix.Notify.success('Book added to shopping list');
+    hideLoader();
+  } catch (error) {
+    hideLoader();
+    console.error('Error:', error);
+>>>>>>> Stashed changes:src/shoppingListService.js
   }
 }
 
