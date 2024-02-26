@@ -101,9 +101,9 @@ pagination.on('beforeMove', function(eventData) {
 });
 
 pagination.on('afterMove', function(eventData) {
-    resultArray = getShoppingList();
+    // resultArray = getShoppingList();
     // console.log(resultArray);
 });
 
-resultArray = getShoppingList();
+// resultArray = getShoppingList();
 // console.log(resultArray);
