@@ -16,7 +16,7 @@ let shoppingCard = [];
 let firstCard = {};
 const descEmpty = '';
 function openModal(bookId) {
-    getBookById.fetchBookById(bookId).then(book => {
+    getBookById(bookId).then(book => {
     modalTitle.innerText = book.title;
     if(!book.description){
         book.description=descEmpty;
