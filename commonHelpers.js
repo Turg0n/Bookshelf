@@ -2,7 +2,7 @@ import{a as S,b as B}from"./assets/apple-books-4f196d85.js";import{a as h,i as d
         All categories</li>
         ${e.map(t=>`<li class="nav-category-item" data-id="${t.list_name}">
         ${t.list_name}
-        </li>`).join("")}`}const G=document.querySelector(".main-wrapper"),u=document.getElementById("bookModal"),f=document.getElementById("bookModalTitle"),V=document.getElementById("bookModalText"),c=document.getElementById("addToShoppingList"),Q=document.querySelector(".modal-close"),m=document.getElementById("modalADText");let a=[],g=[],C={};const K="";function U(e){R.fetchBookById(e).then(t=>{f.innerText=t.title,t.description||(t.description=K),C={book_image:t.book_image,title:t.title,author:t.author,description:t.description,amazonLinks:t.buy_links[0].url,appleLinks:t.buy_links[1].url},f.dataset.bookId=e,V.innerHTML=`<img src="${t.book_image}" alt="${t.title}" class="book-modal-img"/>
+        </li>`).join("")}`}const G=document.querySelector(".main-wrapper"),u=document.getElementById("bookModal"),f=document.getElementById("bookModalTitle"),V=document.getElementById("bookModalText"),c=document.getElementById("addToShoppingList"),Q=document.querySelector(".modal-close"),m=document.getElementById("modalADText");let a=[],g=[],C={};const K="";function U(e){R(e).then(t=>{f.innerText=t.title,t.description||(t.description=K),C={book_image:t.book_image,title:t.title,author:t.author,description:t.description,amazonLinks:t.buy_links[0].url,appleLinks:t.buy_links[1].url},f.dataset.bookId=e,V.innerHTML=`<img src="${t.book_image}" alt="${t.title}" class="book-modal-img"/>
             <div class="book-modal-details">
                 <h2 class="book-modal-title">${t.title}</h2>
                 <h3 class="book-modal-author">${t.author}</h3>
