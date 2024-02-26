@@ -1,3 +1,4 @@
+import './js/header';
 import './js/categories';
 import './js/modal';
 import './js/mobMenu';
@@ -8,11 +9,3 @@ import './js/best-sellers-books';
 import './js/serviceBooks';
 import './js/sideBar';
 import './js/scroll-up';
-import './js/header';
-window.addEventListener('DOMContentLoaded', () => {
-  mobMenu();
-});
-
-
-
-

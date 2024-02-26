@@ -1,17 +1,21 @@
-const mobMenu = () => {
-  const backDropMenu = document.querySelector('.backdrop');
+const backDropMenu = document.querySelector('.backdrop');
 
-  const burgerButton = document.querySelector('.');
+const burgerBtn = document.querySelector('.js-open-menu');
 
-  const closeButton = document.querySelector('.');
+burgerBtn.insertAdjacentHTML(
+  'afterbegin',
+  `<svg class="icon-close visually-hidden" width="28" height="28">
+    <use href="../img/sprite.svg#icon-x-close"></use>
+  </svg>`
+);
 
-  function openMenu() {
-    backDropMenu.classList.toggle('show__mob-menu');
-  }
+const closeIcon = document.querySelector('.icon-close');
+const burgerIcon = document.querySelector('.header-burger-icon');
 
-  burgerButton.addEventListener('click', openMenu);
+function toggleMenuOpen() {
+  backDropMenu.classList.toggle('show__mob-menu');
+  closeIcon.classList.toggle('visually-hidden');
+  burgerIcon.classList.toggle('visually-hidden');
+}
 
-  closeButton.addEventListener('click', openMenu);
-};
-
-export default mobMenu;
+burgerBtn.addEventListener('click', toggleMenuOpen);

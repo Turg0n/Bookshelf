@@ -1,63 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <title>Shopping-list</title>
-  </head>
-  <body>
-    <div class="backdrop">
-      <div class="mob__menu">
-        <div class="mob__items">
-          <button
-            type="button"
-            class="reg__btn"
-            data-action="registration"
-            aria-label="Registration"
-          >
-            <span>Sign up</span
-            ><span
-              ><svg class="registration__arrow" width="20" height="20">
-                <use href="../img/sprite.svg#icon-arrow-arrow-right"></use>
+<div class="backdrop">
+  <div class="mob__menu">
+    <div class="mob__items">
+      <button
+        type="button"
+        class="reg__btn"
+        data-action="registration"
+        aria-label="Registration"
+      >
+        <span>Sign up</span
+        ><span
+          ><svg class="registration__arrow" width="20" height="20">
+            <use href="../img/sprite.svg#icon-arrow-arrow-right"></use>
+          </svg>
+        </span>
+      </button>
+      <nav class="mob__nav">
+        <ul class="mob__nav__list">
+          <li class="mob__home__item">
+            <a
+              href="/index.html"
+              class="mob__home__item-link"
+              aria-label="Link to home page"
+              >Home</a
+            >
+          </li>
+          <li class="mob__shop__item">
+            <a
+              href="/shopping-list.html"
+              class="mob__shop__item-link"
+              aria-label="Link to Shopping list"
+              ><span>Shopping list</span
+              ><svg
+                width="20"
+                height="20"
+                fill="white"
+                class="shopping-list-icon"
+              >
+                <use href="../img/sprite.svg#icon-shopping-cart"></use>
               </svg>
-            </span>
-          </button>
-          <nav class="mob__nav">
-            <ul class="mob__nav__list">
-              <li class="mob__home__item">
-                <a
-                  href="/index.html"
-                  class="mob__home__item-link"
-                  aria-label="Link to home page"
-                  >Home</a
-                >
-              </li>
-              <li class="mob__shop__item">
-                <a
-                  href="/shopping-list.html"
-                  class="mob__shop__item-link"
-                  aria-label="Link to Shopping list"
-                  ><span>Shopping list</span
-                  ><svg width="20" height="20" class="shopping-list-icon">
-                    <use href="../img/Icons.svg#icon-shoper"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <button type="button" class="logout_btn" data-action="logout">
-            <span>Log out</span>
-            <span>
-              <svg class="registration__arrow" width="20" height="20">
-                <use href="../img/sprite.svg#icon-arrow-arrow-right"></use>
-              </svg>
-            </span>
-          </button>
-        </div>
-      </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="logout_btn" data-action="logout">
+        <span>Log out</span>
+        <span>
+          <svg class="registration__arrow" width="20" height="20">
+            <use href="../img/sprite.svg#icon-arrow-arrow-right"></use>
+          </svg>
+        </span>
+      </button>
     </div>
-  </body>
-</html>
+  </div>
+</div>

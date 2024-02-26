@@ -16,6 +16,14 @@
 @import url('./scroll-up.css');
 @import url('./footer.css');
 
+.header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
 :root {
   --primary-font: 'DM Sans', sans-serif;
   --black: #111;
@@ -90,40 +98,38 @@
 
 /* Header Button Active*/
 
- .heder-active {
-   background-color: rgba(234, 198, 69, 1);
+.heder-active {
+  background-color: rgba(234, 198, 69, 1);
+}
 
- }
+.dark-theme .heder-active {
+  color: var(--black);
+}
 
- .dark-theme .heder-active {
-   color: var(--black);
- }
+body {
+  background-color: var(--background-body-light);
+  color: var(--black);
+  font-family: DM Sans;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  position: relative;
+}
 
- body {
-   background-color: var(--background-body-light);
-   color: var(--black);
-   font-family: DM Sans;
-   font-size: 14px;
-   line-height: 1.28;
-   letter-spacing: -0.56px;
-   position: relative;
- }
+.section-position {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
 
- .section-position {
-   padding-top: 40px;
-   padding-bottom: 80px;
- }
+.ctg-sidebar {
+  margin-bottom: 40px;
+}
 
- .ctg-sidebar {
-   margin-bottom: 40px;
- }
+.sidebar-home-section {
+  padding-bottom: 80px;
+}
 
- .sidebar-home-section {
-   padding-bottom: 80px;
- }
-
- /* ------------ */
-
+/* ------------ */
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -148,7 +154,6 @@
   }
 
   /* ------------- */
-
 }
 
 @media only screen and (min-width: 1440px) {
@@ -157,7 +162,7 @@
     padding: 0 24px;
   }
 
-/* Header */
+  /* Header */
 
   .sidebar-home-section {
     display: block;
@@ -173,11 +178,10 @@
     gap: 40px;
     justify-content: start;
   }
-  
+
   .sidebar-home-section {
     padding-bottom: 72px;
   }
 
   /* -------------- */
-
 }
