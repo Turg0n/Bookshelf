@@ -1,4 +1,4 @@
-import { fetchingByBook } from './js/serviceBooks';
+import { getBookById } from './js/serviceBooks';
 import Notiflix from 'notiflix';
 import amazon from './images/amazon.png'; 
 import appleBooks from './images/apple-books.png';
@@ -126,7 +126,7 @@ function renderingShoppingList() {
 export async function addingToShopList(e) {
   try {
     showLoader();
-    const book = await fetchingByBook(e.target.dataset.id);
+    const book = await getBookById(e.target.dataset.id);
     saveToLocalStorage(book);
     Notiflix.Notify.success('Book added to shopping list');
     hideLoader();
