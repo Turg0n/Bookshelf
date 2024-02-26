@@ -34,7 +34,7 @@
     padding: 12px 24px 40px 24px;
 }
 
-.modal-header {
+.modal-head {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -195,7 +195,7 @@
 }
 
 
-.modal-footer {
+.modal-end {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,7 +238,7 @@
     background: #202024;
 }
 
-.modal-footer-text {
+.modal-ad-text {
     display: flex;
     margin-right: auto;
     margin-left: auto;
@@ -301,7 +301,7 @@
         width: 499px;
     }
 
-    .modal-footer-text {
+    .modal-ad-text {
         width: 324px;
         font-size: 12px;
         line-height: 14px;
