@@ -1,5 +1,6 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import { showLoader, hideLoader } from './Loader.js';
 
 import { getAllBooks, getBooksByCategory } from './serviceBooks';
 
@@ -10,16 +11,16 @@ scrollBtn.addEventListener('click', scrollToTop);
 window.addEventListener('scroll', trackScroll);
 
 // LOADER //
-function showLoader() {
-  mainWrapper.insertAdjacentHTML('afterbegin', '<div id="loader"></div>');
-  const loader = document.querySelector('#loader');
-  loader.classList.add('loader');
-}
+// function showLoader() {
+//   mainWrapper.insertAdjacentHTML('afterbegin', '<div id="loader"></div>');
+//   const loader = document.querySelector('#loader');
+//   loader.classList.add('loader');
+// }
 
-function hideLoader() {
-  const loader = document.querySelector('#loader');
-  loader.classList.remove('loader');
-}
+// function hideLoader() {
+//   const loader = document.querySelector('#loader');
+//   loader.classList.remove('loader');
+// }
 
 // SCROLL //
 function scrollToTop() {

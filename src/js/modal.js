@@ -1,6 +1,7 @@
 import { getBookById } from './serviceBooks';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/apple-books.png';
+import { showLoader, hideLoader } from './Loader.js';
 // import getRefs from '';
 // const refs = getRefs();
 const modal = document.getElementById('bookModal');
