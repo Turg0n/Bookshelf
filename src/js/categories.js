@@ -1,5 +1,5 @@
 import axios from 'axios';
-import getBooksByCategory from './serviceBooks';
+import {getBooksByCategory} from './serviceBooks';
 const category_list = document.querySelector('.nav-categories-list');
 
 async function getCategoryList() {
