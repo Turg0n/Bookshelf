@@ -1,4 +1,4 @@
-import Pagination from 'tui.pagination';
+import Pagination from 'tui-pagination'; /* ES6 */
 import 'tui-pagination/dist/tui-pagination.css'
 
 let resultArray =   [];
