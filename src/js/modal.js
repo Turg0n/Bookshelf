@@ -14,7 +14,7 @@ const addTextModal = document.getElementById('modalADText');
 let shoppingList = [];
 let shoppingCard = [];
 let firstCard = {};
-const descEmpty = '';
+const descEmpty = 'The Florida governor gives his account of his achievements and shares his opinions about the political left. Read by John Pruden and the author. 8 hours, 59 minutes unabridged.';
 function openModal(bookId) {
     getBookById(bookId).then(book => {
     modalTitle.innerText = book.title;
@@ -38,12 +38,12 @@ function openModal(bookId) {
                 <ul class="icon-book-modal-list">
                     <li>
                         <a href="${book.buy_links[0].url}" rel="noopener noreferrer nofollow" target="_blank">
-                            <img class="icon-book-modal-amazon" srcset="${amazon} 1x, ${amazon2x} 2x" src="${amazon}" alt="Amazon" loading="lazy"/>
+                            <img class="icon-book-modal-amazon" srcset="${amazon} 1x, src="${amazon}" alt="Amazon" loading="lazy"/>
                         </a>
                     </li>
                     <li>
                         <a href="${book.buy_links[1].url}" rel="noopener noreferrer nofollow" target="_blank">
-                            <img class="icon-book-modal-ibooks" srcset="${applebooks} 1x, ${applebooks2x} 2x" src="${applebooks}" alt="Apple books" loading="lazy"/>
+                            <img class="icon-book-modal-ibooks" srcset="${applebooks} 1x, src="${applebooks}" alt="Apple books" loading="lazy"/>
                         </a>
                     </li>
                 </ul>
@@ -114,7 +114,7 @@ document.addEventListener('keydown', event => {
 });
 // Відкриття модалки
 bookWrapp.addEventListener('click', event => {
-    const bookLink = event.target.closest('.best-sellers-list-item');
+    const bookLink = event.target.closest('.book-link');
     if (bookLink) {
     event.preventDefault();
     const bookId = bookLink.dataset.id;

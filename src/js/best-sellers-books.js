@@ -87,7 +87,7 @@ async function showMoreByCategory(event) {
 
 // MARKUP //
 function bookCardTemplate(book, liClass) {
-    return `<li class="${liClass}" data-id="${book._id}">
+    return `<li class="${liClass} book-link" data-id="${book._id}">
                  <div class="overlay-box">
                    <img
                      class="book-img"
