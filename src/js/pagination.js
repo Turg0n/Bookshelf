@@ -94,16 +94,16 @@ set_Test_ShoppingList();
 
 
 setPaginationOptions(3,2);
-let pagination = new Pagination('pagination-list', paginationOptions);
+// let pagination = new Pagination('pagination-list', paginationOptions);
 
-pagination.on('beforeMove', function(eventData) {
-    // return confirm('Go to page ' + eventData.page + '?');
-});
+// pagination.on('beforeMove', function(eventData) {
+//     // return confirm('Go to page ' + eventData.page + '?');
+// });
 
-pagination.on('afterMove', function(eventData) {
-    resultArray = getShoppingList();
-    // console.log(resultArray);
-});
+// pagination.on('afterMove', function(eventData) {
+//     resultArray = getShoppingList();
+//     // console.log(resultArray);
+// });
 
-resultArray = getShoppingList();
+// resultArray = getShoppingList();
 // console.log(resultArray);
