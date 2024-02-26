@@ -75,35 +75,35 @@ return resultArray;
 
 
 //Єкспортування функції отримимання данних через пагінацію
-// export {getShoppingList};
+export {getShoppingList, setPaginationOptions};
 
 
-// --------------------------------------------------TEST data----------------------------------------------------
+// // --------------------------------------------------TEST data----------------------------------------------------
 
-function set_Test_ShoppingList() {
-let testArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
-// let testArray = [];
-localStorage.setItem(LOCAL_STORAGE_NAME, JSON.stringify(testArray));
-}
+// function set_Test_ShoppingList() {
+// let testArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+// // let testArray = [];
+// localStorage.setItem(LOCAL_STORAGE_NAME, JSON.stringify(testArray));
+// }
 
-set_Test_ShoppingList();
-// --------------------------------------------------run----------------------------------------------------
+// set_Test_ShoppingList();
+// // --------------------------------------------------run----------------------------------------------------
 
 
 
 
 
 setPaginationOptions(3,2);
-// let pagination = new Pagination('pagination-list', paginationOptions);
+let pagination = new Pagination('pagination-list', paginationOptions);
 
-// pagination.on('beforeMove', function(eventData) {
-//     // return confirm('Go to page ' + eventData.page + '?');
-// });
+pagination.on('beforeMove', function(eventData) {
+    // return confirm('Go to page ' + eventData.page + '?');
+});
 
-// pagination.on('afterMove', function(eventData) {
-//     resultArray = getShoppingList();
-//     // console.log(resultArray);
-// });
+pagination.on('afterMove', function(eventData) {
+    resultArray = getShoppingList();
+    // console.log(resultArray);
+});
 
-// resultArray = getShoppingList();
+resultArray = getShoppingList();
 // console.log(resultArray);
