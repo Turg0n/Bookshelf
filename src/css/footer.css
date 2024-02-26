@@ -1,5 +1,7 @@
+
 footer {
     margin-top: 20px;
+
     border: 1.5px solid black;
     border-radius: 8px 8px 0px 0px;
     padding-top: 8px;
@@ -7,22 +9,42 @@ footer {
     height: 100%;
   } 
 
-  footer p{
-    padding: 12px 0;
-    font-size: 10px;
+    .dark-theme .footer-container {
+      background: #111111;
+      border: 1.5px solid #FFF;
+      color: #FFF;
+  
+    }
+
+    .footer-container h3{
+    margin-left: 12px;
+    color: #4F2EE8;
+  }
+  
+  .footer-p {
+    padding: 23px 0;
+  }
+
+    .footer-container p{
+    font-size: 14px;
+
     text-align: center;
     letter-spacing: 2px;
   }
   
   @media screen and (min-width: 768px) {
-    footer p{
-      font-size: 14px;
+
+    .footer-container p{
+      font-size: 18px;
+
     }
   
   }
   
   @media screen and (min-width: 1440px) {
-    footer p{
-      font-size: 16px;
+
+    .footer-container p{
+      font-size: 20px;
+
     }
   }
