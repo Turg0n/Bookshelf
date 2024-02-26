@@ -158,4 +158,4 @@ function renderBooksBlocks(collection) {
     renderCategoryName(books);  
 }
 
-export { renderAllBooks, showMoreByCategory };
+export { renderAllBooks, showMoreByCategory, mainWrapper };
