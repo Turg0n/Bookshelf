@@ -82,7 +82,7 @@ function toggleShoppingList(bookId) {
     shoppingList.splice(index, 1);
     shoppingCard.splice(index,1);
     }
-
+        // Запись в Локалку
     localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
     localStorage.setItem('shoppingCard',JSON.stringify(shoppingCard));
 
