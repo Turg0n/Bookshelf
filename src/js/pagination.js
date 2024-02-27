@@ -91,19 +91,19 @@ export {getShoppingList, setPaginationOptions};
 
 
 
-// // --------------------------------------------------example----------------------------------------------------
-if (PAGINATION_DEV_LIST) {
-  setPaginationOptions(3, 2);
-  let pagination = new Pagination('pagination-list', paginationOptions);
+// // --------------------------------------------------example use----------------------------------------------------
+// if (PAGINATION_DEV_LIST) {
+//   setPaginationOptions(3, 2);
+//   let pagination = new Pagination('pagination-list', paginationOptions);
 
-  // pagination.on('beforeMove', function (eventData) {
+//   // pagination.on('beforeMove', function (eventData) {
       
-  // });
+//   // });
 
-  pagination.on('afterMove', function (eventData) {
-      resultArray = getShoppingList();
-      // console.log(resultArray);
-  });
+//   pagination.on('afterMove', function (eventData) {
+//       resultArray = getShoppingList();
+//       // console.log(resultArray);
+//   });
 
-  resultArray = getShoppingList();
-}
+//   resultArray = getShoppingList();
+// }
