@@ -1,24 +1,23 @@
-import { supportItems } from './support-item.js';
-import { createMarkup } from './markup.js';
-import firstImage from './../images/support/img-1@1x.png';
-import secondImage from './../images/support/img-2@1x.png';
-import thirdImage from './../images/support/img-3@1x.png';
-import fourthImage from './../images/support/img-4@1x.png';
-import fifthImage from './../images/support/img-5@1x.png';
-import sixthImage from './../images/support/img-6@1x.png';
-import seventhImage from './../images/support/img-7@1x.png';
-import eightImage from './../images/support/img-8@1x.png';
-import ninthImage from './../images/support/img-9@1x.png';
-import firstImageForRetina from './../images/support/img-1@2x.png';
-import secondImageForRetina from './../images/support/img-2@2x.png';
-import thirdImageForRetina from './../images/support/img-3@2x.png';
-import fourthImageForRetina from './../images/support/img-4@2x.png';
-import fifthImageForRetina from './../images/support/img-5@2x.png';
-import sixthImageForRetina from './../images/support/img-6@2x.png';
-import seventhImageForRetina from './../images/support/img-7@2x.png';
-import eightImageForRetina from './../images/support/img-8@2x.png';
-import ninthImageForRetina from './../images/support/img-9@2x.png';
-import icon from './../images/icons.svg'; 
+import { supportItems } from './sidebar-item';
+import firstImage from '../img/support/img-1@1x.png';
+import secondImage from '../img/support/img-2@1x.png';
+import thirdImage from '../img/support/img-3@1x.png';
+import fourthImage from '../img/support/img-4@1x.png';
+import fifthImage from '../img/support/img-5@1x.png';
+import sixthImage from '../img/support/img-6@1x.png';
+import seventhImage from '../img/support/img-7@1x.png';
+import eightImage from '../img/support/img-8@1x.png';
+import ninthImage from '../img/support/img-9@1x.png';
+import firstImageForRetina from '../img/support/img-1@2x.png';
+import secondImageForRetina from '../img/support/img-2@2x.png';
+import thirdImageForRetina from '../img/support/img-3@2x.png';
+import fourthImageForRetina from '../img/support/img-4@2x.png';
+import fifthImageForRetina from '../img/support/img-5@2x.png';
+import sixthImageForRetina from '../img/support/img-6@2x.png';
+import seventhImageForRetina from '../img/support/img-7@2x.png';
+import eightImageForRetina from '../img/support/img-8@2x.png';
+import ninthImageForRetina from '../img/support/img-9@2x.png';
+import icon from '../img/sprite.svg';
 
 
 const divContainer = document.querySelector('.support-container');
@@ -82,11 +81,11 @@ const arrowUp = document.querySelector('.support-arrow-up');
 const imagesArr = [];
 const imagesArr2x = [];
 
-imagesArr.push(firstImage, secondImage, thirdImage, fourthImage, fifthImage, sixthImage, seventhImage, eightImage, ninthImage);
-imagesArr2x.push(firstImageForRetina, secondImageForRetina, thirdImageForRetina, fourthImageForRetina, fifthImageForRetina, sixthImageForRetina, seventhImageForRetina, eightImageForRetina, ninthImageForRetina);
+// imagesArr.push(firstImage, secondImage, thirdImage, fourthImage, fifthImage, sixthImage, seventhImage, eightImage, ninthImage);
+// imagesArr2x.push(firstImageForRetina, secondImageForRetina, thirdImageForRetina, fourthImageForRetina, fifthImageForRetina, sixthImageForRetina, seventhImageForRetina, eightImageForRetina, ninthImageForRetina);
 
 getImages(imagesArr, imagesArr2x, supportItems)
-supportList.insertAdjacentHTML('afterbegin', createMarkup(supportItems));
+supportList.append( createMarkup(supportItems));
 
 arrow.addEventListener('click', handlerClick);
 
@@ -124,4 +123,20 @@ function getImages(arr, arr2, arr3) {
 
 function addElement(targetElement, position, element) {
   targetElement.insertAdjacentElement(position, element);
+}
+
+function createMarkup(linkList) {
+    
+    const divWrap = document.createElement('div');
+    linkList.forEach((element,index) => {
+        const wrapper = document.createElement('a');
+        wrapper.append(index + 1)
+        wrapper.href = element.url;
+       const image = document.createElement('img');
+       image.src = element.img;
+       wrapper.append(image)
+       divWrap.append(wrapper)
+        
+    });
+   return divWrap;
 }
