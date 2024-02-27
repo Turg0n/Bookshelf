@@ -91,14 +91,14 @@ export {getShoppingList, setPaginationOptions};
 
 
 
-// // --------------------------------------------------run----------------------------------------------------
+// // --------------------------------------------------example----------------------------------------------------
 if (PAGINATION_DEV_LIST) {
   setPaginationOptions(3, 2);
   let pagination = new Pagination('pagination-list', paginationOptions);
 
-  pagination.on('beforeMove', function (eventData) {
-      // return confirm('Go to page ' + eventData.page + '?');
-  });
+  // pagination.on('beforeMove', function (eventData) {
+      
+  // });
 
   pagination.on('afterMove', function (eventData) {
       resultArray = getShoppingList();
@@ -106,7 +106,4 @@ if (PAGINATION_DEV_LIST) {
   });
 
   resultArray = getShoppingList();
-  // console.log(resultArray);
-} else {
-  // console.log("Element with id 'pagination-list' not found.");
 }
