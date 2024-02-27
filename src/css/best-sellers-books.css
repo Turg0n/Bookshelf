@@ -4,7 +4,9 @@
     padding-right: 20px;
     margin: 0 auto;
 }
-
+.book-link {
+    cursor: pointer;
+}
 .dark-theme h1  {
     color: #FFFFFF;
 }
