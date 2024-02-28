@@ -12,6 +12,7 @@ async function getCategoryList() {
 
 const renderCategories = async () => {
   try {
+    showLoader();
     const category = await getCategoryList();
     category_list.innerHTML = await markupCategoriesList(category);
     const listCategory = document.querySelectorAll('.nav-category-item');
@@ -26,6 +27,7 @@ const renderCategories = async () => {
         event.target.classList.add('active');
       });
     });
+    hideLoader();
   } catch (error) {
     console.log('Oops! Something went wrong');
     hideLoader();
