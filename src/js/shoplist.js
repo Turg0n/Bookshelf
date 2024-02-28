@@ -3,7 +3,7 @@ import emptyDesk2 from './../images/books-desk@2x.png';
 import emptyMob1 from './../images/books-mob@1x.png';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/applebooks.png';
-
+import icon from "./../img/sprite.svg"
 
 const KEY_LOCAL_STORAGE = "shoppingCard";// local keys
 const KEY_LOCAL_STORAGE_ID = "shoppingList";
@@ -71,7 +71,7 @@ function funCreateCard(readyCard) {
         <div>
           <button class="btn-shop shopping-list-card-container-trash" id="${index}">
             <svg class="shopping-list-card-icon-trash" width="18px" height="18px">
-              <use href="../img/sprite.svg#icon-x-close"></use>
+              <use href="${icon}#icon-del"></use>
             </svg>
           </button>
         </div>
