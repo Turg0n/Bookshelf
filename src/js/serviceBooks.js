@@ -36,7 +36,7 @@ async function getBooksByCategory(category) {
 }
 
 
-export async function getBookById(bookId) {
+async function getBookById(bookId) {
   try {
     showLoader();
     const bookInfo = await axios.get(`https://books-backend.p.goit.global/books/${id}`);
