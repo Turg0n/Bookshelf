@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {getBooksByCategory} from './serviceBooks';
+import { showLoader, hideLoader } from './Loader';
 const category_list = document.querySelector('.nav-categories-list');
 
 async function getCategoryList() {
@@ -27,6 +28,7 @@ const renderCategories = async () => {
     });
   } catch (error) {
     console.log('Oops! Something went wrong');
+    hideLoader();
   }
 };
 
