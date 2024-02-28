@@ -447,3 +447,7 @@
 .visuallyhidden {
   visibility: hidden;
 }
+
+.header-shoplist {
+  margin-bottom: 112px;
+}

@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/shopping-list.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Shopping-list</title>
   </head>
   <body>
     <header class="header-shoplist">
-      <load ="partials/header.html" />
+      <load src="./partials/header.html" />
     </header>
     <main>
       <div class="container container-shop-list">
         <aside class="shopping-list-aside shop-list-aside" style="padding-top: 0px">
-          <div class="home-donate"><load ="partials/donate.html" /></div>
+          <div class="home-donate"><load src="./partials/sideBar.html"/></div>
         </aside>
         <div class="container-shopping-list">
           <h1 class="shoping-list-header">
@@ -43,9 +43,10 @@
       </div>
       <!-- <load ="partials/button_up.html" /> -->
     </main>
-    <footer>
-      <!-- <load ="partials/footer.html" /> -->
-    </footer>
-    <script type="module" src="/shoppingListService.js"></script>
+    <!-- <div class="footer-shop-position">
+      <load src="partials/footer.html" />
+    </div> -->
+    <script type="module" src="./shopping-import.js"></script>
+    <script type="module" src="./shoppingListService.js"></script>
   </body>
 </html>
