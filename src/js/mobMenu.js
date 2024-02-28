@@ -4,7 +4,7 @@ const burgerBtn = document.querySelector('.js-open-menu');
 
 burgerBtn.insertAdjacentHTML(
   'afterbegin',
-  `<svg class="icon-close visually-hidden" width="28" height="28">
+  `<svg class="icon-close visually-hidden " width="28" height="28">
     <use href="./img/sprite.svg#icon-x-close"></use>
   </svg>`
 );
