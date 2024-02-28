@@ -15,12 +15,21 @@ let shoppingList = [];
 let shoppingCard = [];
 let firstCard = {};
 const descEmpty = 'The Florida governor gives his account of his achievements and shares his opinions about the political left. Read by John Pruden and the author. 8 hours, 59 minutes unabridged.';
+
 function openModal(bookId) {
+    
+    // console.log('show loader');
+    // showLoader();
+    
     getBookById(bookId).then(book => {
     modalTitle.innerText = book.title;
     if(!book.description){
         book.description=descEmpty;
+
+        // console.log('hide loader');
+        // hideLoader();
     }
+    // hideLoader();
     firstCard = {
         book_image: book.book_image,
         title: book.title,
@@ -62,6 +71,7 @@ function openModal(bookId) {
     modal.classList.add('show');
     document.body.style.overflow = 'hidden'; 
     });
+    
 }
 
 function closeModal() {
