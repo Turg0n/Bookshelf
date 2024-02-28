@@ -35,6 +35,7 @@ async function getBooksByCategory(category) {
   }
 }
 
+
 async function getBookById(bookId) {
   try {
     showLoader();
