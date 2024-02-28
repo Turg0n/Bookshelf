@@ -4,7 +4,7 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-const path = './img/support/';
+const path = '/img/support/';
 const funds = document.querySelector('.swiper-wrapper');
 function fundMarkeup(arr){
     const markup = arr.map((el, index) => {
