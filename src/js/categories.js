@@ -29,7 +29,7 @@ const renderCategories = async () => {
     });
     hideLoader();
   } catch (error) {
-    console.log('Oops! Something went wrong');
+    // console.log('Oops! Something went wrong');
     hideLoader();
   }
 };
