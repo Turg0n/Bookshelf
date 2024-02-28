@@ -8,7 +8,6 @@
 @import url('./header.css');
 @import url('./mob-menu.css');
 @import url('./best-sellers-books.css');
-@import url('./shopping-list.css');
 @import url('./sideBar.css');
 @import url('./modal.css');
 @import url('./categories.css');
@@ -41,39 +40,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-/* @font-face {
-  font-family: 'DM Sans';
-  src: url(../fonts/DMSans-Medium.woff2) format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-} */
 
-/* @font-face {
-  font-family: 'DM Sans';
-  src: url(../fonts/DMSans-RegularItalic.woff2) format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-} */
-
-/* @font-face {
-  font-family: 'DM Sans';
-  src: url(../fonts/DMSans-Bold.woff2) format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-} */
-
-/* @font-face {
-  font-family: 'DM Sans';
-  src: url(../fonts/DMSans-Regular.woff2) format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-} */
-
-/* Header */
 
 .visually-hidden {
   position: absolute;
