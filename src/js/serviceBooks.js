@@ -39,7 +39,7 @@ async function getBooksByCategory(category) {
 async function getBookById(bookId) {
   try {
     showLoader();
-    const bookInfo = await axios.get(`https://books-backend.p.goit.global/books/${id}`);
+    const bookInfo = await axios(`https://books-backend.p.goit.global/books/${bookId}`);
     hideLoader();
     return bookInfo.data;
   } catch (error) {
