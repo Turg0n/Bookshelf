@@ -1,9 +1,10 @@
 import {supportItems} from './support-items';
-
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+
+import action from "./../img/support/action-against.png"
 
 const funds = document.querySelector('.swiper-wrapper');
 function fundMarkeup(arr){

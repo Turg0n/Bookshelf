@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {getBooksByCategory} from './serviceBooks';
 import { showLoader, hideLoader } from './Loader';
+import {cleanMainWrapper, renderBooksList,} from './best-sellers-books.js';
 const category_list = document.querySelector('.nav-categories-list');
 
 async function getCategoryList() {
@@ -39,10 +40,29 @@ category_list.addEventListener('click', checkCategory);
 
 function checkCategory(e) {
   if (e.target.dataset.id) {
-    getBooksByCategory(e);
+    showMoreByCategory(e.target.dataset.id);
   }
 }
 
+async function showMoreByCategory(event) {
+  cleanMainWrapper();
+  showLoader();
+  
+  const category = event;
+
+  try {
+    const booksByCategory = await getBooksByCategory(category);
+    renderBooksList(booksByCategory);
+  } catch (error) {
+      iziToast.error({
+        title: '',
+        message: 'Sorry, we couldn\'t find any books in this category',
+        position: "topRight",
+        });
+  } finally {
+    hideLoader();
+  }
+}
 function markupCategoriesList(categories) {
   return `<li class="nav-category-item active" data-id="all-categories">
         All categories</li>

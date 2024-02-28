@@ -69,6 +69,7 @@ async function showMoreByCategory(event) {
 
   cleanMainWrapper();
   showLoader();
+  
   const category = event.target.dataset.category;
 
   try {
@@ -125,7 +126,7 @@ function addBooksBlocks(collection) {
   mainWrapper.insertAdjacentHTML('beforeend', booksBlockTemplate(collection))
 }
 
-function addBooksList(books) {
+export function addBooksList(books) {
   mainWrapper.insertAdjacentHTML('beforeend', booksList(books));
 }
 
@@ -137,14 +138,14 @@ function renderMainBooksHeader() {
   );
 }
 
-function renderCategoryName(booksCollection) {
+export function renderCategoryName(booksCollection) {
   const words = booksCollection[0].list_name.split(' ');
   const lastWord = words.pop();
   const categoryName = `${words.join(' ')} <span class="accent-text">${lastWord}</span>`;
   mainWrapper.insertAdjacentHTML('afterbegin', `<h1 class="main-title">${categoryName}</h1>`);
 }
 
-function cleanMainWrapper() {
+export function cleanMainWrapper() {
   mainWrapper.innerHTML = '';
 }
 
@@ -153,7 +154,7 @@ function renderBooksBlocks(collection) {
   renderMainBooksHeader();
 }
 
-  function renderBooksList(books) {
+export  function renderBooksList(books) {
     addBooksList(books);
     renderCategoryName(books);  
 }
