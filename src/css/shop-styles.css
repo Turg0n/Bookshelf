@@ -2,7 +2,7 @@
 @import url('./header.css');
 @import url('./sideBar.css');
 @import url('./shopping.css');
-
+@import url('./mob-menu.css');
 
 :root {
     --primary-font: "DM Sans",
