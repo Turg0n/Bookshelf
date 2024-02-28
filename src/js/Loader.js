@@ -3,7 +3,7 @@ export function showLoader() {
   const loader = document.querySelectorAll('#loader');
   if (loader) {
   loader.forEach(node => {
-    console.log(node);
+    // console.log(node);
     node.style.display = 'flex';
   });
 } else {
@@ -16,7 +16,7 @@ export function hideLoader() {
   const loader = document.querySelectorAll('#loader');
   if (loader) {
   loader.forEach(node => {
-    console.log(node);
+    // console.log(node);
     node.style.display = 'none';
   });
 } else {
