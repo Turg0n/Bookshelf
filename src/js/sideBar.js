@@ -13,7 +13,7 @@ function fundMarkeup(arr){
         return `<li class="funds-elm swiper-slide">
                 <a class="funds-link" href="${url}" target="_blank" rel="noopener noreferrer">
                     <div class="num-order">${orderNumber}</div>
-                <img src="${path}${img}.png" alt="${title}" srcset="${path}${img}.png 1x, ${path}${img}@2x.png 2x">
+                <img src="${path}${img}" alt="${title}" srcset="${path}${img} 1x,">
             </a> </li>`
     }).join('');
     funds.insertAdjacentHTML('beforeend', markup)
