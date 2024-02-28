@@ -1,4 +1,4 @@
-import icon from './img/sprite.svg';
+import icon from '../img/sprite.svg';
 
 const burgerBtn = document.querySelector('.js-open-menu');
 const closeBtn = document.querySelector('.js-close-menu');
