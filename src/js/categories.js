@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {getBooksByCategory} from './serviceBooks';
+import { showLoader, hideLoader } from './Loader';
 const category_list = document.querySelector('.nav-categories-list');
 
 async function getCategoryList() {
@@ -11,6 +12,7 @@ async function getCategoryList() {
 
 const renderCategories = async () => {
   try {
+    showLoader();
     const category = await getCategoryList();
     category_list.innerHTML = await markupCategoriesList(category);
     const listCategory = document.querySelectorAll('.nav-category-item');
@@ -25,8 +27,10 @@ const renderCategories = async () => {
         event.target.classList.add('active');
       });
     });
+    hideLoader();
   } catch (error) {
-    console.log('Oops! Something went wrong');
+    // console.log('Oops! Something went wrong');
+    hideLoader();
   }
 };
 
