@@ -10,10 +10,10 @@ let fg = new Image();
 let pipeUp = new Image();
 let pipeBottom = new Image();
 
-bird.src = "./img/interactive/bird.png";
-bg.src = "./img/interactive/bg.png";
+bird.src = "../img/interactive/bird.png";
+bg.src = ".img/interactive/bg.png";
 fg.src = "./img/interactive/bird_fg.png";
-pipeUp.src = "./img/interactive/pipeUp.png";
+pipeUp.src = "//img/interactive/pipeUp.png";
 pipeBottom.src = "./img/interactive/pipeBottom.png";
 
 let fly = new Audio();
