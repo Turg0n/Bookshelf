@@ -39,11 +39,12 @@ renderCategories();
 category_list.addEventListener('click', checkCategory);
 
 function checkCategory(e) {
-  if (e.target.dataset.id!=='all-categories') {
-    showMoreByCategory(e.target.dataset.id);
-  }
-  else{
-    renderAllBooks(e.target.dataset.id);
+  if (e.target.dataset.id) {
+    if(e.target.dataset.id!=='all-categories'){
+    showMoreByCategory(e.target.dataset.id);}
+    else{
+      renderAllBooks(e.target.dataset.id);
+    }
   }
 }
 
