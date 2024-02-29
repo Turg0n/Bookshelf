@@ -11,13 +11,16 @@ footer {
     .dark-theme .footer-container {
       background: var(--black);
       border: 1.5px solid var(--white);
-      color: var(--white);
     }
 
   
   .footer-p {
     padding: 23px 0;
     color: var(--black-one);
+  }
+
+  .dark-theme .footer-p{
+    color: var(--grey);
   }
 
     .footer-container p{
