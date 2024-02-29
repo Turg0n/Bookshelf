@@ -3,7 +3,9 @@ import emptyDesk2 from './../images/books-desk@2x.png';
 import emptyMob1 from './../images/books-mob@1x.png';
 import amazon from '../images/amazon.png';
 import applebooks from '../images/applebooks.png';
-import icon from "./../img/sprite.svg"
+import icon from "./../img/sprite.svg";
+
+import { getShoppingList, setPaginationOptions } from './pagination.js';
 
 const KEY_LOCAL_STORAGE = "shoppingCard";// local keys
 const KEY_LOCAL_STORAGE_ID = "shoppingList";
@@ -115,6 +117,10 @@ function setStorage(key, readyCard) {
 function parseStorage(key) {
   try {
     const parseFlag = localStorage.getItem(key);
+
+    // let getShopping = getShoppingList();
+    // console.table(getShopping);
+
     return parseFlag === null ? undefined : JSON.parse(parseFlag);
   } catch (error) {
     console.error("Get state error: ", error.message);
