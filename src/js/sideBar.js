@@ -4,7 +4,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import action from "./../img/support/action-against.png"
+
 
 const funds = document.querySelector('.swiper-wrapper');
 function fundMarkeup(arr){
@@ -14,7 +14,7 @@ function fundMarkeup(arr){
         return `<li class="funds-elm swiper-slide">
                 <a class="funds-link" href="${url}" target="_blank" rel="noopener noreferrer">
                     <div class="num-order">${orderNumber}</div>
-                <img src="./../img/support/${img}.png" alt="${title}" srcset="./../img/support/${img}.png 1x, /../img/support/${img}@2x.png 2x">
+                <img src="${img}" alt="${title}" srcset="${img} 1x, ${img} 2x">
             </a> </li>`
     }).join('');
     funds.insertAdjacentHTML('beforeend', markup)
