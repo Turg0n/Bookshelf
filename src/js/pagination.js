@@ -1,6 +1,8 @@
 import Pagination from 'tui-pagination'; /* ES6 */
 import 'tui-pagination/dist/tui-pagination.css'
 
+let pagination;
+let myCurrentPage = 1;
 let resultArray =   [];
 
 let paginationOptions   =   {
@@ -25,7 +27,8 @@ let paginationOptions   =   {
       }
 };
 
-const LOCAL_STORAGE_NAME = 'ShoppingListLocalStorage';
+const LOCAL_STORAGE_NAME = 'shoppingCard';
+
 const PAGINATION_DEV_LIST = document.getElementById('pagination-list');
 
 
@@ -61,7 +64,7 @@ function getShoppingList(){
     } else {
         
     arrayShoppingList     =   JSON.parse(arrayShoppingList);
-    indexFrom   =   paginationOptions.itemsPerPage*pagination._currentPage-paginationOptions.itemsPerPage;
+    indexFrom   =   paginationOptions.itemsPerPage*myCurrentPage-paginationOptions.itemsPerPage;
     resultArray   =   arrayShoppingList.slice(indexFrom,indexFrom+paginationOptions.itemsPerPage);
     PAGINATION_DEV_LIST.style.display = 'block';  
     }
@@ -88,15 +91,21 @@ export {getShoppingList, setPaginationOptions};
 
 
 
-// // --------------------------------------------------example use----------------------------------------------------
-// if (PAGINATION_DEV_LIST) {
-//   setPaginationOptions(3, 2);
-//   let pagination = new Pagination('pagination-list', paginationOptions);
+// // --------------------------------------------------use----------------------------------------------------
 
-//   pagination.on('afterMove', function (eventData) {
-//       resultArray = getShoppingList();
-//       // console.log(resultArray);
-//   });
 
-//   resultArray = getShoppingList();
-// }
+if (PAGINATION_DEV_LIST) {
+
+
+
+  setPaginationOptions(3, 2);
+  let pagination = new Pagination('pagination-list', paginationOptions);
+
+  pagination.on('afterMove', function (eventData) {
+    myCurrentPage = eventData.page;
+      resultArray = getShoppingList();
+      return resultArray;
+  });
+
+  //  getShoppingList();
+}
